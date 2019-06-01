@@ -12,7 +12,11 @@ class App extends Component {
     e.preventDefault();
 
     const user = e.target.elements.username.value;
-    console.log(user);
+    axios.get(`https://api.github.com/users/${user}`)
+    .then((res) => {
+      console.log('res', res);
+    })
+
   }
 
 
