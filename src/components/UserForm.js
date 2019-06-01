@@ -1,11 +1,13 @@
 import React from 'react';
 
 
-const UserForm = () => {
+const UserForm = (props) => {
+
+
 
   return (
-    <form>
-      <input type="text" name="username" />
+    <form onSubmit={props.getUser}>
+      <input style={{margin: "20px auto", display: "block"}} type="text" name="username" />
       <button>Submit</button>
     </form>
   )
